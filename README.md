@@ -104,5 +104,5 @@ Informações armazenadas:
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/TechStoreSwing.git
+git clone https://github.com/jhuanvcode/TechStoreSwing.git
 cd TechStoreSwing# TechStoreSwing
