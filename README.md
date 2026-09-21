@@ -105,4 +105,166 @@ Informações armazenadas:
 
 ```bash
 git clone https://github.com/jhuanvcode/TechStoreSwing.git
-cd TechStoreSwing# TechStoreSwing
+cd TechStoreSwing
+```
+### 2. Requisitos
+
+Para executar o projeto, é necessário ter instalado:
+
+- Java JDK 25 ou compatível com a configuração do projeto
+- Maven
+- Microsoft SQL Server
+- IntelliJ IDEA ou outra IDE compatível com projetos Maven
+
+## 3. Banco de Dados
+
+O sistema utiliza o banco de dados **TECH_VENDAS**, desenvolvido em **Microsoft SQL Server**.
+
+### 📊 Tabelas utilizadas
+
+O sistema trabalha com as seguintes tabelas:
+
+- 👥 **TABELA DE CLIENTES** — Armazena os dados dos clientes cadastrados.
+- 📦 **TABELA DE PRODUTOS** — Armazena os produtos, preços e informações de estoque.
+- 👨‍💼 **TABELA DE VENDEDORES** — Armazena os dados dos vendedores e seus percentuais de comissão.
+
+## 4. Configuração da conexão
+
+Configure a conexão localmente no arquivo responsável pela conexão com o SQL Server.
+
+Exemplo:
+```
+String url =
+        "jdbc:sqlserver://127.0.0.1:1434;" +
+        "databaseName=TECH_VENDAS;" +
+        "encrypt=true;" +
+        "trustServerCertificate=true";
+```
+## 🎨 Estrutura do Projeto
+
+```
+TechStoreSwing/
+├── src/
+│   └── br/
+│       └── com/
+│           └── techstore/
+│               ├── Cliente.java
+│               ├── Produto.java
+│               ├── Vendedor.java
+│               │
+│               ├── CadastroCliente.java
+│               ├── CadastroProduto.java
+│               ├── CadastroVendedor.java
+│               │
+│               ├── ConexaoBanco.java
+│               ├── TesteConexao.java
+│               │
+│               ├── TelaClientes.java
+│               ├── TelaProdutos.java
+│               ├── TelaVendedores.java
+│               └── TelaMenu.java
+│
+├── pom.xml
+├── README.md
+└── .gitignore
+```
+
+## 🗄️ Banco de Dados
+
+A aplicação utiliza JDBC para estabelecer a comunicação entre o Java e o SQL Server.
+
+O fluxo básico da aplicação é:
+
+```
+Interface Java Swing
+        ↓
+Classes de cadastro
+        ↓
+JDBC
+        ↓
+SQL Server
+        ↓
+TECH_VENDAS
+```
+## As operações realizadas pelo sistema incluem:
+
+| Comando | Função |
+|---------|--------|
+| `SELECT` | Consultar registros |
+| `INSERT` | Cadastrar registros |
+| `UPDATE` | Alterar registros |
+| `DELETE` | Excluir registros |
+✨ Funcionalidades Implementadas
+
+### 👥 Cadastro de Clientes
+
+-Cadastro de clientes
+-Consulta de clientes
+-Alteração de clientes
+-Exclusão de clientes
+-Validação de CPF duplicado
+
+### 📦 Cadastro de Produtos
+
+-Cadastro de produtos
+-Consulta de produtos
+-Alteração de produtos
+-Exclusão de produtos
+-Controle de estoque
+-Validação de código duplicado
+
+### 👨‍💼 Cadastro de Vendedores
+
+-Cadastro de vendedores
+-Consulta de vendedores
+-Alteração de vendedores
+-Exclusão de vendedores
+-Controle de percentual de comissão
+-Validação de matrícula duplicada
+
+### 🗄️ Banco de Dados
+
+-Conexão com SQL Server
+-Operações CRUD
+-PreparedStatement
+-Consultas parametrizadas
+-Integração através de JDBC
+
+### 🖥️ Interface
+
+-Java Swing
+-Múltiplas telas
+-Tabelas para visualização dos registros
+-Botões de cadastro, alteração, exclusão e atualização
+-Navegação entre as telas
+
+## 🧪 Exemplo de Uso
+
+1. Execute a aplicação.
+2. Acesse o menu principal.
+3. Escolha **Clientes**, **Produtos** ou **Vendedores**.
+4. Cadastre um novo registro.
+5. Selecione um registro na tabela.
+6. Utilize **Alterar** para modificar seus dados.
+7. Utilize **Excluir** para remover um registro.
+8. Utilize **Atualizar** para recarregar os dados do SQL Server.
+
+## 📚 Objetivo Acadêmico
+
+O projeto foi desenvolvido com objetivo educacional, colocando em prática conceitos de:
+
+- Programação Orientada a Objetos
+- Java Swing
+- JDBC
+- SQL
+- Banco de dados relacional
+- Operações CRUD
+- Maven
+- Integração entre aplicação e banco de dados
+- Desenvolvimento de interfaces gráficas
+  
+## 📄 Licença
+
+Projeto desenvolvido para fins educacionais e acadêmicos.
+
+⭐ Projeto desenvolvido utilizando Java + Swing + JDBC + SQL Server + Maven.
